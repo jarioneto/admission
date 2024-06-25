@@ -1,10 +1,9 @@
 
 # CajuBoard
 
-![CI](https://github.com/jarioneto/admission/workflows/CI/badge.svg?branch=main)
+[![Build and Deploy](https://github.com/jarioneto/admission/actions/workflows/main.yml/badge.svg)](https://github.com/jarioneto/admission/actions/workflows/main.yml)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/895003b0-e3d7-4b6b-bacb-98b3c7113262/deploy-status)](https://app.netlify.com/sites/caju-board/deploys)
 ![react](https://img.shields.io/github/package-json/dependency-version/jarioneto/admission/react)
-![typescript](https://img.shields.io/github/package-json/dependency-version/jarioneto/admission/typescript)
 
 Aplicação desenvolvida como avaliação para um desafio técnico.
 

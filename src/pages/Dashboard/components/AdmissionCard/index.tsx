@@ -91,11 +91,11 @@ const AdmissionCard = ({ admission }: AdmissionCardProps) => {
         </IconButton>
       </S.Actions>
 
-      <S.Confirm data-visible={visible} aria-hidden={!visible}>
+      <S.Dialog data-visible={visible} aria-hidden={!visible}>
         {loading ? (
           <Loader />
         ) : (
-          <div role="alertdialog">
+          <S.Alert role="alertdialog">
             <S.Section>
               <span>Deseja realizar a ação?</span>
             </S.Section>
@@ -107,9 +107,9 @@ const AdmissionCard = ({ admission }: AdmissionCardProps) => {
                 Sim
               </Button>
             </S.Actions>
-          </div>
+          </S.Alert>
         )}
-      </S.Confirm>
+      </S.Dialog>
     </S.Container>
   );
 };

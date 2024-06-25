@@ -1,7 +1,8 @@
 import axios from 'axios';
+import { ENVIROMENT } from '~/constants/enviroment';
 
 const http = axios.create({
-  baseURL: process.env.ADMISSION_API_URL,
+  baseURL: ENVIROMENT.API_URL,
   headers: {
     Accept: 'application/json'
   },

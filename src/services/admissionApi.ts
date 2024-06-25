@@ -13,12 +13,12 @@ import {
 import http from './http';
 
 export const listAdmissions = async (
-  { cpf }: AdmissionListRequest
+  { employeeCPF }: AdmissionListRequest = {}
 ): Promise<AxiosResponse<AdmissionListResponse>> => {
   let query = '';
 
-  if (cpf) {
-    const params = new URLSearchParams({ cpf });
+  if (employeeCPF) {
+    const params = new URLSearchParams({ employeeCPF });
     query = `?${params}`;
   }
 

@@ -8,7 +8,7 @@
     "init:db": "json-server --watch db.json",
     "build": "tsc && vite build",
     "test:dev": "jest --verbose --no-cache",
-    "test:ci": "jest --ci --no-cache",
+    "test:ci": "jest --ci --coverage --no-cache",
     "lint": "eslint . --ext ts,tsx --no-cache",
     "preview": "vite preview"
   },

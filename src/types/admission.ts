@@ -6,15 +6,19 @@ export enum AdmissionStatus {
 
 export interface Admission {
   id: string;
-  cpf: string;
-  admissionDate: string;
-  email: string;
+  date: string;
+  employeeCPF: string;
+  employeeEmail: string;
   employeeName: string;
-  status: keyof typeof AdmissionStatus;
+  status: AdmissionStatus;
 }
 
+export type AdmissionFormValues = Omit<Admission, 'id' | 'status'>;
+
+export type AdmissionDashboard = Record<AdmissionStatus, Array<Admission>>;
+
 export interface AdmissionListRequest {
-  cpf?: string;
+  employeeCPF?: string;
 }
 
 export type AdmissionListResponse = Array<Admission>;

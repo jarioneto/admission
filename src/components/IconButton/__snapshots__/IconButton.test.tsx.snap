@@ -1,0 +1,217 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconButton component circle should render circle button 1`] = `
+<div>
+  <button
+    aria-disabled="false"
+    class="sc-aYaIB gigBDC sc-gEvDqW hJYzlF"
+    color="primary"
+    shape="circle"
+    variant="outlined"
+  >
+    <svg
+      aria-hidden="true"
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      stroke-width="0"
+      viewBox="0 0 20 20"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`IconButton component outlined should render outlined button 1`] = `
+<div>
+  <button
+    aria-disabled="false"
+    class="sc-aYaIB gigBDC sc-gEvDqW hJYzlF"
+    color="primary"
+    shape="circle"
+    variant="outlined"
+  >
+    <svg
+      aria-hidden="true"
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      stroke-width="0"
+      viewBox="0 0 20 20"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`IconButton component pill should render pill button 1`] = `
+<div>
+  <button
+    aria-disabled="false"
+    class="sc-aYaIB cjjgwX sc-gEvDqW drzIsX"
+    color="primary"
+    shape="pill"
+    variant="outlined"
+  >
+    <svg
+      aria-hidden="true"
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      stroke-width="0"
+      viewBox="0 0 20 20"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`IconButton component primary should render primary button 1`] = `
+<div>
+  <button
+    aria-disabled="false"
+    class="sc-aYaIB gigBDC sc-gEvDqW hJYzlF"
+    color="primary"
+    shape="circle"
+    variant="outlined"
+  >
+    <svg
+      aria-hidden="true"
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      stroke-width="0"
+      viewBox="0 0 20 20"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`IconButton component rectangle should render rectangle button 1`] = `
+<div>
+  <button
+    aria-disabled="false"
+    class="sc-aYaIB jdXliq sc-gEvDqW drzIsX"
+    color="primary"
+    shape="rectangle"
+    variant="outlined"
+  >
+    <svg
+      aria-hidden="true"
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      stroke-width="0"
+      viewBox="0 0 20 20"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`IconButton component secondary should render secondary button 1`] = `
+<div>
+  <button
+    aria-disabled="false"
+    class="sc-aYaIB fFzHeq sc-gEvDqW hJYzlF"
+    color="secondary"
+    shape="circle"
+    variant="outlined"
+  >
+    <svg
+      aria-hidden="true"
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      stroke-width="0"
+      viewBox="0 0 20 20"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`IconButton component solid should render solid button 1`] = `
+<div>
+  <button
+    aria-disabled="false"
+    class="sc-aYaIB fLbeks sc-gEvDqW hJYzlF"
+    color="primary"
+    shape="circle"
+    variant="solid"
+  >
+    <svg
+      aria-hidden="true"
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      stroke-width="0"
+      viewBox="0 0 20 20"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`IconButton component tertiary should render tertiary button 1`] = `
+<div>
+  <button
+    aria-disabled="false"
+    class="sc-aYaIB hRhCsi sc-gEvDqW hJYzlF"
+    color="tertiary"
+    shape="circle"
+    variant="outlined"
+  >
+    <svg
+      aria-hidden="true"
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      stroke-width="0"
+      viewBox="0 0 20 20"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"
+      />
+    </svg>
+  </button>
+</div>
+`;

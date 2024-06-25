@@ -9,6 +9,16 @@ export default {
   },
   moduleNameMapper: {
     "^~/(.+)": "<rootDir>/src/$1",
+    '__mocks__/(.+)': '<rootDir>/__mocks__/$1'
   },
-//   setupFilesAfterEnv: ["@testing-library/jest-dom/extend-expect"],
+  collectCoverage: true,
+  coverageThreshold: {
+    global: {
+      branchs: 85,
+      functions: 85,
+      lines: 85,
+      statements: 85
+    }
+  },
+  setupFilesAfterEnv: ["<rootDir>/setupTests.ts"],
 };

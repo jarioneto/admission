@@ -1,38 +1,69 @@
-import React, { InputHTMLAttributes } from "react";
-import styled from "styled-components";
+import { InputHTMLAttributes, forwardRef, useId } from "react";
+import * as S from './styles';
 
-export const Input = styled.input`
-  padding: 0 8px;
-  vertical-align: middle;
-  border-radius: 2px;
-  width: 100%;
-  min-height: 36px;
-  background-color: #ffffff;
-  border: 1px solid rgba(36, 28, 21, 0.3);
-  transition: all 0.2s ease-in-out 0s;
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: normal;
-  border-radius:8px;
-  :focus {
-    outline: none;
-    border: 1px solid #007c89;
-    box-shadow: inset 0 0 0 1px #007c89;
-  }
-`;
-type Props = {
+type InputElement = HTMLInputElement;
+type TextFieldStatus = 'valid' | 'invalid';
+interface TextFieldProps extends InputHTMLAttributes<InputElement> {
+  /**
+   * Label that will be displayed on the textfield.
+   */
   label?: string;
-  error?: string;
-} & InputHTMLAttributes<any>;
 
-const TextField = (props: Props) => {
+  /**
+   * Use to set input status.
+   *
+   * @default null
+   */
+  status?: TextFieldStatus;
+
+  /**
+   * Use to set input as required.
+   *
+   * @default false
+   */
+  required?: boolean;
+
+  /**
+   * Informative message that will be displayed in the bottom of Textfield.
+   */
+  helperText?: string;
+}
+
+const TextField = forwardRef<InputElement, TextFieldProps>(function TextField(
+  props,
+  forwardedRef
+) {
+  const {
+    id,
+    status,
+    label,
+    helperText,
+    disabled,
+    ...textFieldProps
+  } = props;
+
+  const internalId = useId();
+  const inputId = id ?? internalId;
+  const labelId = `${inputId}-label`;
+  const helperTextId = `${inputId}-helper-text`;
+
   return (
-    <div>
-      <label htmlFor={props.id}>{props.label}</label>
-      <Input {...props} />
-      <span style={{fontSize: 12, color: 'red'}}>{props.error}</span>
-    </div>
+    <S.Container>
+      <S.Label id={labelId} htmlFor={inputId}>{label}</S.Label>
+      <S.Input 
+        {...textFieldProps}
+        id={inputId}
+        ref={forwardedRef}
+        disabled={disabled}
+        aria-labelledby={labelId}
+        aria-describedby={helperTextId}
+        aria-disabled={disabled}
+        data-status={status}
+      />
+      {helperText && <S.HelperText id={helperTextId} data-status={status}>{helperText}</S.HelperText>}
+    </S.Container>
   );
-};
+});
 
-export default TextField;
+export { TextField };
+export type { TextFieldProps, TextFieldStatus };

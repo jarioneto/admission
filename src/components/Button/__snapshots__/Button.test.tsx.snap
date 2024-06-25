@@ -4,7 +4,7 @@ exports[`Button component circle should render circle button 1`] = `
 <div>
   <button
     aria-disabled="false"
-    class="sc-aYaIB gigBDC"
+    class="sc-aYaIB YWqnm"
     color="primary"
     shape="circle"
     variant="outlined"
@@ -18,7 +18,7 @@ exports[`Button component outlined should render outlined button 1`] = `
 <div>
   <button
     aria-disabled="false"
-    class="sc-aYaIB jdXliq"
+    class="sc-aYaIB juLFoy"
     color="primary"
     shape="rectangle"
     variant="outlined"
@@ -32,7 +32,7 @@ exports[`Button component pill should render pill button 1`] = `
 <div>
   <button
     aria-disabled="false"
-    class="sc-aYaIB cjjgwX"
+    class="sc-aYaIB jFtxKj"
     color="primary"
     shape="pill"
     variant="outlined"
@@ -46,7 +46,7 @@ exports[`Button component primary should render primary button 1`] = `
 <div>
   <button
     aria-disabled="false"
-    class="sc-aYaIB jdXliq"
+    class="sc-aYaIB juLFoy"
     color="primary"
     shape="rectangle"
     variant="outlined"
@@ -60,7 +60,7 @@ exports[`Button component rectangle should render rectangle button 1`] = `
 <div>
   <button
     aria-disabled="false"
-    class="sc-aYaIB jdXliq"
+    class="sc-aYaIB juLFoy"
     color="primary"
     shape="rectangle"
     variant="outlined"
@@ -74,7 +74,7 @@ exports[`Button component secondary should render secondary button 1`] = `
 <div>
   <button
     aria-disabled="false"
-    class="sc-aYaIB fouFEy"
+    class="sc-aYaIB bCUTGq"
     color="secondary"
     shape="rectangle"
     variant="outlined"
@@ -88,7 +88,7 @@ exports[`Button component solid should render solid button 1`] = `
 <div>
   <button
     aria-disabled="false"
-    class="sc-aYaIB zCRxU"
+    class="sc-aYaIB iWBPOX"
     color="primary"
     shape="rectangle"
     variant="solid"
@@ -102,7 +102,7 @@ exports[`Button component tertiary should render tertiary button 1`] = `
 <div>
   <button
     aria-disabled="false"
-    class="sc-aYaIB dCRDXC"
+    class="sc-aYaIB bgcTgy"
     color="tertiary"
     shape="rectangle"
     variant="outlined"

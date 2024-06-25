@@ -91,7 +91,7 @@ const AdmissionCard = ({ admission }: AdmissionCardProps) => {
         </IconButton>
       </S.Actions>
 
-      <S.Dialog data-visible={visible} aria-hidden={!visible}>
+      <S.Dialog data-visible={visible}>
         {loading ? (
           <Loader />
         ) : (

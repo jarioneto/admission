@@ -27,15 +27,15 @@ type ButtonSizeAttributes = {
 
 const buttonColorMap: Record<ButtonColor, ButtonColorAttributes> = {
   primary: {
-    color: '#64a98c',
+    color: '#318462',
     contrast: '#FFFFFF'
   },
   secondary: {
-    color: '#348FEB',
+    color: '#2278ce',
     contrast: '#FFFFFF'
   },
   tertiary: {
-    color: '#ff919a',
+    color: '#b45c63',
     contrast: '#FFFFFF'
   }
 };

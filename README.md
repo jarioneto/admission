@@ -25,6 +25,13 @@ Stack utilizada no desenvolvimento:
   * CI (**build, lint, test**)
   * CD (**Deploy to Netlify**)
 
+O desenvolvimento foi guiado utilizando User centric metrics além de tópicos como acessibilidade, SEO e boas práticas, abaixo segue os reports do Lighthouse.
+
+![Lighthouse report](screenshots/lighthouse-report.png)
+
+![Lighthouse report mobile](screenshots/lighthouse-report-mobile.png)
+
+
 # Configuração inicial
 
 Execute os passos abaixo para realizar a configuração inicial da aplicação.

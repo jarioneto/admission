@@ -1,0 +1,106 @@
+name: Build and Deploy
+
+env:
+  NODE_VERSION: '20'
+  VITE_ADMISSION_API_URL: ${{ secrets.VITE_ADMISSION_API_URL }}
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "${{env.NODE_VERSION}}"
+
+      - uses: actions/cache@v4
+        id: yarn-cache
+        with:
+          path: |
+            ~/cache
+            !~/cache/exclude
+            **/node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Lint
+        run: yarn lint
+      
+      - name: Test
+        run: yarn test:ci
+
+      - name: Build
+        run: yarn build
+
+  deploy:
+    runs-on: ubuntu-20.04
+    needs: build
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: setup environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: "${{env.NODE_VERSION}}"
+
+      - name: Install Netlify
+        run: npm install netlify-cli@17.10.1 -g
+
+      - id: yarn-cache-dir-path
+        name: Get yarn cache directory path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - id: yarn-cache
+        name: Cache yarn
+        uses: actions/cache@v4
+        with:
+          path: ${{steps.yarn-cache-dir-path.outputs.dir}}
+          key: ${{runner.os}}-node${{env.NODE_VERSION}}-yarn-${{hashFiles('**/yarn.lock')}}
+          restore-keys: |
+            ${{runner.os}}-node${{env.NODE_VERSION}}-yarn-
+
+      - id: node-modules-cache
+        name: Cache node modules
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: ${{runner.os}}-node${{env.NODE_VERSION}}-node-modules-${{hashFiles('**/yarn.lock')}}
+          restore-keys: |
+            ${{runner.os}}-node${{env.NODE_VERSION}}-node-modules-
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Generate .env
+        run: |
+          cat << EOF > ".env"
+            VITE_ADMISSION_API_URL=${{ secrets.VITE_ADMISSION_API_URL }}
+          EOF
+
+      - name: Build
+        run: yarn build
+
+      - name: Deploy production
+        if: github.ref == 'refs/heads/main'
+        run: |
+          netlify deploy \
+            --dir dist \
+            --site ${{ secrets.NETLIFY_SITE_ID }} \
+            --auth ${{ secrets.NETLIFY_API_TOKEN }} \
+            --prod

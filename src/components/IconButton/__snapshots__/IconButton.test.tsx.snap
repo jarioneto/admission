@@ -4,7 +4,7 @@ exports[`IconButton component circle should render circle button 1`] = `
 <div>
   <button
     aria-disabled="false"
-    class="sc-aYaIB gigBDC sc-gEvDqW hJYzlF"
+    class="sc-aYaIB YWqnm sc-gEvDqW hJYzlF"
     color="primary"
     shape="circle"
     variant="outlined"
@@ -31,7 +31,7 @@ exports[`IconButton component outlined should render outlined button 1`] = `
 <div>
   <button
     aria-disabled="false"
-    class="sc-aYaIB gigBDC sc-gEvDqW hJYzlF"
+    class="sc-aYaIB YWqnm sc-gEvDqW hJYzlF"
     color="primary"
     shape="circle"
     variant="outlined"
@@ -58,7 +58,7 @@ exports[`IconButton component pill should render pill button 1`] = `
 <div>
   <button
     aria-disabled="false"
-    class="sc-aYaIB cjjgwX sc-gEvDqW drzIsX"
+    class="sc-aYaIB jFtxKj sc-gEvDqW drzIsX"
     color="primary"
     shape="pill"
     variant="outlined"
@@ -85,7 +85,7 @@ exports[`IconButton component primary should render primary button 1`] = `
 <div>
   <button
     aria-disabled="false"
-    class="sc-aYaIB gigBDC sc-gEvDqW hJYzlF"
+    class="sc-aYaIB YWqnm sc-gEvDqW hJYzlF"
     color="primary"
     shape="circle"
     variant="outlined"
@@ -112,7 +112,7 @@ exports[`IconButton component rectangle should render rectangle button 1`] = `
 <div>
   <button
     aria-disabled="false"
-    class="sc-aYaIB jdXliq sc-gEvDqW drzIsX"
+    class="sc-aYaIB juLFoy sc-gEvDqW drzIsX"
     color="primary"
     shape="rectangle"
     variant="outlined"
@@ -139,7 +139,7 @@ exports[`IconButton component secondary should render secondary button 1`] = `
 <div>
   <button
     aria-disabled="false"
-    class="sc-aYaIB fFzHeq sc-gEvDqW hJYzlF"
+    class="sc-aYaIB hcWssO sc-gEvDqW hJYzlF"
     color="secondary"
     shape="circle"
     variant="outlined"
@@ -166,7 +166,7 @@ exports[`IconButton component solid should render solid button 1`] = `
 <div>
   <button
     aria-disabled="false"
-    class="sc-aYaIB fLbeks sc-gEvDqW hJYzlF"
+    class="sc-aYaIB jZJIRv sc-gEvDqW hJYzlF"
     color="primary"
     shape="circle"
     variant="solid"
@@ -193,7 +193,7 @@ exports[`IconButton component tertiary should render tertiary button 1`] = `
 <div>
   <button
     aria-disabled="false"
-    class="sc-aYaIB hRhCsi sc-gEvDqW hJYzlF"
+    class="sc-aYaIB bznnSW sc-gEvDqW hJYzlF"
     color="tertiary"
     shape="circle"
     variant="outlined"

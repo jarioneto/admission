@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Header>
-        <h1>CajuBoard</h1>
+        <h2>CajuBoard</h2>
       </Header>
       <Router />
       <ToastContainer />

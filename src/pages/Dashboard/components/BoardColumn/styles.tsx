@@ -12,7 +12,7 @@ const columnVariantMap: Record<ColumnVariant, string> = {
 };
 
 const titleVariantMap: Record<ColumnVariant, string> = {
-  REVIEW: "#DEB23F",
+  REVIEW: "#906C0D",
   APPROVED: "#4242DF",
   REPROVED: "#CE2893"
 };

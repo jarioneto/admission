@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button component circle should render circle button 1`] = `
+<div>
+  <button
+    aria-disabled="false"
+    class="sc-aYaIB gigBDC"
+    color="primary"
+    shape="circle"
+    variant="outlined"
+  >
+    Cancel
+  </button>
+</div>
+`;
+
+exports[`Button component outlined should render outlined button 1`] = `
+<div>
+  <button
+    aria-disabled="false"
+    class="sc-aYaIB jdXliq"
+    color="primary"
+    shape="rectangle"
+    variant="outlined"
+  >
+    Cancel
+  </button>
+</div>
+`;
+
+exports[`Button component pill should render pill button 1`] = `
+<div>
+  <button
+    aria-disabled="false"
+    class="sc-aYaIB cjjgwX"
+    color="primary"
+    shape="pill"
+    variant="outlined"
+  >
+    Cancel
+  </button>
+</div>
+`;
+
+exports[`Button component primary should render primary button 1`] = `
+<div>
+  <button
+    aria-disabled="false"
+    class="sc-aYaIB jdXliq"
+    color="primary"
+    shape="rectangle"
+    variant="outlined"
+  >
+    Cancel
+  </button>
+</div>
+`;
+
+exports[`Button component rectangle should render rectangle button 1`] = `
+<div>
+  <button
+    aria-disabled="false"
+    class="sc-aYaIB jdXliq"
+    color="primary"
+    shape="rectangle"
+    variant="outlined"
+  >
+    Cancel
+  </button>
+</div>
+`;
+
+exports[`Button component secondary should render secondary button 1`] = `
+<div>
+  <button
+    aria-disabled="false"
+    class="sc-aYaIB fouFEy"
+    color="secondary"
+    shape="rectangle"
+    variant="outlined"
+  >
+    Cancel
+  </button>
+</div>
+`;
+
+exports[`Button component solid should render solid button 1`] = `
+<div>
+  <button
+    aria-disabled="false"
+    class="sc-aYaIB zCRxU"
+    color="primary"
+    shape="rectangle"
+    variant="solid"
+  >
+    Cancel
+  </button>
+</div>
+`;
+
+exports[`Button component tertiary should render tertiary button 1`] = `
+<div>
+  <button
+    aria-disabled="false"
+    class="sc-aYaIB dCRDXC"
+    color="tertiary"
+    shape="rectangle"
+    variant="outlined"
+  >
+    Cancel
+  </button>
+</div>
+`;

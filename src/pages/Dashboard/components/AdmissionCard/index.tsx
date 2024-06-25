@@ -95,7 +95,7 @@ const AdmissionCard = ({ admission }: AdmissionCardProps) => {
         {loading ? (
           <Loader />
         ) : (
-          <S.Alert role="alertdialog">
+          <S.Alert role="alertdialog" id="admission-card-dialog" aria-label="Confirmação">
             <S.Section>
               <span>Deseja realizar a ação?</span>
             </S.Section>

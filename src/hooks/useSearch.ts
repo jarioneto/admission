@@ -1,7 +1,7 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useDashboard } from './useDashboard';
-import { cpf } from 'cpf-cnpj-validator';
 import { formatCPF, unformatCPF } from '~/utils/formaters';
+import { validateCPF } from '~/utils/validators';
 
 type UseSearch = {
   /**
@@ -24,18 +24,18 @@ type UseSearch = {
 
 export function useSearch(): UseSearch {
   const [filter, setFilter] = useState('');
-  const [hasFilter, setHasFilter] = useState(false);
+  const hasFilter = useRef<boolean>();
   const { listAdmissions } = useDashboard();
 
   useEffect(() => {
-    if (cpf.isValid(filter)) {
-      setHasFilter(true);
+    if (validateCPF(filter)) {
+      hasFilter.current = true;
       listAdmissions(unformatCPF(filter));
-    } else if (filter === '' && hasFilter) {
-      setHasFilter(false);
+    } else if (filter === '' && hasFilter.current) {
+      hasFilter.current = false;
       listAdmissions();
     }
-  }, [filter, hasFilter, listAdmissions]);
+  }, [filter, listAdmissions]);
 
   const handleChange = useCallback((value: string) => {
     setFilter(formatCPF(value));

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { HTMLAttributes, useState } from 'react';
 import { Button } from '~/components/Button';
 import { IconButton } from '~/components/IconButton';
 import { HiOutlineMail, HiOutlineUser, HiOutlineCalendar, HiOutlineTrash } from 'react-icons/hi';
@@ -8,6 +8,48 @@ import { formatToBrazilianDate } from '~/utils/formaters';
 import { Admission, AdmissionStatus } from '~/types/admission';
 
 import * as S from './styles';
+
+/* -------------------------------------------------------------------------------------------------
+ * AdmissionCardDialog
+ * -----------------------------------------------------------------------------------------------*/
+interface AdmissionCardDailogProps extends HTMLAttributes<HTMLDivElement> {
+  onConfirm: () => void;
+  onCancel: () => void;
+  loading: boolean;
+}
+
+const AdmissionCardDialog = ({
+  onCancel,
+  onConfirm,
+  loading,
+  ...props
+}: AdmissionCardDailogProps) => {
+  return (
+    <S.Dialog {...props}>
+      {loading ? (
+        <Loader />
+      ) : (
+        <S.Alert role="alertdialog" id="admission-card-dialog" aria-label="Confirmação">
+          <S.Section>
+            <span>Deseja realizar a ação?</span>
+          </S.Section>
+          <S.Actions>
+            <Button variant="solid" size="small" color="tertiary" onClick={onCancel}>
+              Não
+            </Button>
+            <Button variant="solid" size="small" color="primary" onClick={onConfirm}>
+              Sim
+            </Button>
+          </S.Actions>
+        </S.Alert>
+      )}
+    </S.Dialog>
+  );
+};
+
+/* -------------------------------------------------------------------------------------------------
+ * AdmissionCard
+ * -----------------------------------------------------------------------------------------------*/
 
 type AdmissionCardProps = {
   admission: Admission;
@@ -92,25 +134,12 @@ const AdmissionCard = ({ admission }: AdmissionCardProps) => {
         </IconButton>
       </S.Actions>
 
-      <S.Dialog data-visible={visible}>
-        {loading ? (
-          <Loader />
-        ) : (
-          <S.Alert role="alertdialog" id="admission-card-dialog" aria-label="Confirmação">
-            <S.Section>
-              <span>Deseja realizar a ação?</span>
-            </S.Section>
-            <S.Actions>
-              <Button variant="solid" size="small" color="tertiary" onClick={toogleVisible}>
-                Não
-              </Button>
-              <Button variant="solid" size="small" color="primary" onClick={handleConfirm}>
-                Sim
-              </Button>
-            </S.Actions>
-          </S.Alert>
-        )}
-      </S.Dialog>
+      <AdmissionCardDialog
+        loading={loading}
+        onCancel={toogleVisible}
+        onConfirm={handleConfirm}
+        data-visible={visible}
+      />
     </S.Container>
   );
 };

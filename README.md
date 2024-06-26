@@ -1,121 +1,100 @@
 
-# Caju Front End Teste
+# CajuBoard
 
-Esse é um teste para você demonstrar suas experiencia como front end, a aplicação basicamente se divide em duas telas, o `Dashboard` e um `Formulário`.
-Voce deverá criar uma plataforma de admissão que permita o usuario adicionar uma admissão com as opções de aprovar, reprovar ou excluir.
+[![Build and Deploy](https://github.com/jarioneto/admission/actions/workflows/main.yml/badge.svg)](https://github.com/jarioneto/admission/actions/workflows/main.yml)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/895003b0-e3d7-4b6b-bacb-98b3c7113262/deploy-status)](https://app.netlify.com/sites/caju-board/deploys)
+![react](https://img.shields.io/github/package-json/dependency-version/jarioneto/admission/react)
 
-O `Dashboard` mostra todas as admissões criadas, com as opções de Aprovar, reprovar, e excluir.
+Aplicação desenvolvida como avaliação para um desafio técnico.
 
-![Screenshot 2024-06-11 at 11 48 24 AM](https://github.com/caju-beneficios/caju-front-teste-1/assets/31169925/fedeff5c-a0d3-4df1-aebd-1f2d25c56a48)
+![CajuBoard dashboard](screenshots/dashboard-page.png)
 
-Dashboard com os cards. (Utilize o componente `RegistrationCard`)
+![CajuBoard admission](screenshots/admission-page.png)
 
-![Screenshot 2024-06-11 at 1 52 35 PM](https://github.com/caju-beneficios/caju-front-teste-1/assets/31169925/3b002341-454b-4b24-82cb-6390656b56cc)
+Para acesso a aplicação utilizar o link a seguir [CajuBoard](https://caju-board.netlify.app).
 
-O `Formulario` exibe um formulário simples que será utilizado para preencher o dashboard com os dados.
+Stack utilizada no desenvolvimento:
+* TypeScript
+* React
+* Vite
+* Cypress
+* Jest
+* React Testing Library
+* ESlint
+* Prettier
+* CI/CD (Github Actions)
+  * CI (**build, lint, test**)
+  * CD (**Deploy to Netlify**)
 
-![Screenshot 2024-06-11 at 11 48 47 AM](https://github.com/caju-beneficios/caju-front-teste-1/assets/31169925/bbbb211c-165f-40e5-b2af-61adafd61398)
+O desenvolvimento foi guiado utilizando User centric metrics além de tópicos como acessibilidade, SEO e boas práticas, abaixo segue os reports do Lighthouse.
 
-## Apresentanção do problema
+![Lighthouse report](screenshots/lighthouse-report.png)
 
-O desafio é melhorar a organização do projeto, refatorar o código e implementar algumas regras e novas funcionalidades(logo abaixo).
-Sinta-se a vontade para criar novas pastas, novos utils, contextos, custom hooks, o que achar melhor para deixar o projeto mais organizado e atigir as especificações abaixo.
+![Lighthouse report mobile](screenshots/lighthouse-report-mobile.png)
 
 
-## Especificações
+# Configuração inicial
 
-### Dashboard
-  
-- Implementar `GET` ao carregar a pagina e ao fazer pequisa por `CPF`
-- Filtrar os cards por coluna, usando o status.
-- Implementar `PUT` ao clicar em Reprovar e alterar o status para `REPROVED`
-- Implementar `PUT` ao clicar em Aprovar e alterar o status para `APPROVED`
-- Implementar `PUT` ao clicar em Revisar novamente e alterar o status para `REVIEW`
-- Implementar `DELETE` ao clicar no lixeira no card.
-- Implementar um loading na tela ao realizar requisições.
-- Realizar a requisição automaticamente ao preencher um CPF válido completo
-- Atualizar os dados (refetch) ao clicar no icone de atualizar
-- Adicionar máscara de CPF no campo de pesquisa.
+Execute os passos abaixo para realizar a configuração inicial da aplicação.
 
-### Pesquisa por CPF
 
-Para realizar a pesquisa por CPF, utilize essa funcionalidade do json-web-server:
-<br/>
-https://github.com/typicode/json-server/tree/v0?tab=readme-ov-file#filter
+### 1 - Variáveis de ambiente
 
-### Formulário
+Crie uma cópia do arquivo .env.example e e renomeie para .env
 
-- Implementar validação no campo de `email` para que aceite apenas emails válidos
-- Implementar validação no campo `nome completo` para que aceite pelo menos um espaço, no mínimo duas letras, e que a primeira letra não seja um número.
-- Implementar validação no campo CPF para aceitar apenas CPFs válidos e adicionar uma máscara de CPF ao campo.
-- Implementar `POST` ao preencher todos os campos corretamentes.
-- Redirecionar ao `/dashboard` ao criar uma nova registration.
-
-## Regras de negócio
-
-- Implementar tipagem correta e enums em TypeScript.
-- Todas as requisições devem ter modal de confirmação da ação
-- Todas as requisições devem aparecer uma notificação de sucesso ou erro
-- O botão de `Reprovar` e `Aprovar` só deve aparecer em registrations com status `REVIEW` 
-- O botão `Revisar novamente` só deve aparecer em registration com status `REPROVED` ou `APPROVED`
-
-## API
-Você consumirá uma API mockada localmente, que será executada utilizando o json-server. Para mais informações consulte a [documentação](https://github.com/typicode/json-server/).
-
-Exemplo de Requisição:
-
+```bash
+cp .env.example .env
 ```
-POST http://localhost:3000/registrations
-Content-Type: application/json
-{
-  "admissionDate": "23/10/2023",
-  "email": "maria@caju.com.br",
-  "employeeName": "Maria Silva",
-  "status": "REVIEW",
-  "cpf": "12345678901"
-}
+
+Edite o arquivo criado no passo anterior e informe a URL da api
+
+```bash
+VITE_ADMISSION_API_URL="http://localhost:3000"
 ```
 
 
-## Extras (opcional)
+### 2 - Instalação das dependências
 
-- Testes Unitários e de Integração `(Obrigátorio para Senior e Tech Lead)`
-- End-to-End (E2E) 
-- Documentação detalhada utilizando Storybook e Docusaurus
-- Configuração de CI/CD com deploy automatizado
+Para instalar as dependências da aplicação execute o comando abaixo:
 
-## Dicas e sugestões
+```bash
+yarn
+```
 
-- Crie custom hooks para separar a lógica da camada de UI.
-- Utilize alguma lib de validação para o formulário
-- Crie testes que simulem o comportamento esperado do usuario.
+# Scripts disponíveis
 
-## Desenvolvimento
+### Execução em modo de desenvolvimento
 
-```shell
-git clone https://github.com/caju-beneficios/caju-front-teste-1.git
-cd caju-front-test-1
-yarn 
+```bash
 yarn dev
 ```
 
-Abra outro terminal e execute: 
-```shell
-yarn init:db
+### Executar linter do código
+
+```bash
+yarn lint
 ```
 
-Para os testes
+### Criar build de produção
 
-```shell
+```bash
+yarn build
+```
+
+### Executar testes unitários
+
+```bash
 yarn test:dev
 ```
-Se tude tiver dado certo as seguintes portas estarão disponiveis:
-<br/>
 
-Aplicação http://localhost:3001/
-<br/>
-Json Web Server http://localhost:3000/
+### Executar testes E2E
 
-``
-Para concluir o desenvolvimento, clone o repositório, faça as edições necessárias e depois envie a URL do novo repositório com suas alterações para o RH.
-``
+```bash
+yarn test:e2e
+```
+
+### Iniciar o JSON Server
+
+```bash
+yarn init:db
+```

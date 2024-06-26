@@ -16,7 +16,7 @@ export const Header = styled.header`
   padding:0px 24px;
   z-index: 10;
 
-  h1 {
+  h2 {
     color: #fff;
     font-size: 24px;
   }

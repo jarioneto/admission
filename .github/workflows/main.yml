@@ -1,4 +1,4 @@
-name: theodora-belisarius
+name: Build and Deploy
 
 env:
   NODE_VERSION: '20'

@@ -18,11 +18,11 @@ export const Input = styled.input`
   box-sizing: border-box;
 
   &[data-status="valid"] {
-    border-color: #64A98C;
+    border-color: #318462;
   }
 
   &[data-status="invalid"] {
-    border-color: #FF919A;
+    border-color: #b45c63;
   }
 
   &:focus, &:focus-visible {
@@ -44,11 +44,11 @@ export const HelperText = styled.span`
   color: #181818;
 
   &[data-status="valid"] {
-    color: #64A98C;
+    color: #318462;
   }
 
   &[data-status="invalid"] {
-    color: #FF919A;
+    color: #b45c63;
   }
 `;
 

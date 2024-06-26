@@ -47,7 +47,7 @@ export const Actions = styled.div`
   }
 `;
 
-export const Confirm = styled.div`
+export const Dialog = styled.div`
   position: absolute;
   top: 0;
   bottom: 0;
@@ -82,4 +82,12 @@ export const Confirm = styled.div`
     transition: transform 0.4s, opacity 0.1s;
     transition: transform 0.4s, opacity 0.1s, -webkit-transform 0.4s;
   }
+`;
+
+export const Alert = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 10px;
 `;

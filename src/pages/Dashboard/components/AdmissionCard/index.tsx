@@ -86,16 +86,17 @@ const AdmissionCard = ({ admission }: AdmissionCardProps) => {
           data-align="end"
           aria-label="Excluir"
           onClick={() => handleAction('DELETE')}
+          data-testid="button-delete-admission"
         >
           <HiOutlineTrash />
         </IconButton>
       </S.Actions>
 
-      <S.Confirm data-visible={visible} aria-hidden={!visible}>
+      <S.Dialog data-visible={visible}>
         {loading ? (
           <Loader />
         ) : (
-          <div role="alertdialog">
+          <S.Alert role="alertdialog" id="admission-card-dialog" aria-label="Confirmação">
             <S.Section>
               <span>Deseja realizar a ação?</span>
             </S.Section>
@@ -107,9 +108,9 @@ const AdmissionCard = ({ admission }: AdmissionCardProps) => {
                 Sim
               </Button>
             </S.Actions>
-          </div>
+          </S.Alert>
         )}
-      </S.Confirm>
+      </S.Dialog>
     </S.Container>
   );
 };

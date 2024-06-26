@@ -6,7 +6,6 @@ const http = axios.create({
   headers: {
     Accept: 'application/json'
   },
-  timeout: 10000
 });
 
 export default http;

@@ -17,6 +17,7 @@ Stack utilizada no desenvolvimento:
 * TypeScript
 * React
 * Vite
+* Cypress
 * Jest
 * React Testing Library
 * ESlint
@@ -80,10 +81,16 @@ yarn lint
 yarn build
 ```
 
-### Executar testes
+### Executar testes unitários
 
 ```bash
 yarn test:dev
+```
+
+### Executar testes E2E
+
+```bash
+yarn test:e2e
 ```
 
 ### Iniciar o JSON Server

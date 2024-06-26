@@ -86,6 +86,7 @@ const AdmissionCard = ({ admission }: AdmissionCardProps) => {
           data-align="end"
           aria-label="Excluir"
           onClick={() => handleAction('DELETE')}
+          data-testid="button-delete-admission"
         >
           <HiOutlineTrash />
         </IconButton>

@@ -6,6 +6,7 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
+    "types": ["cypress"],
 
     /* Bundler mode */
     "moduleResolution": "node",
@@ -21,7 +22,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "./setupTests.ts"],
+  "include": ["src", "./setupTests.ts", "cypress/e2e/**/*.ts"],
   "references": [{ "path": "./tsconfig.node.json" }],
   "extends": "./tsconfig.paths.json"
 }

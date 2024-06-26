@@ -17,6 +17,7 @@ Stack utilizada no desenvolvimento:
 * TypeScript
 * React
 * Vite
+* Cypress
 * Jest
 * React Testing Library
 * ESlint
@@ -24,6 +25,13 @@ Stack utilizada no desenvolvimento:
 * CI/CD (Github Actions)
   * CI (**build, lint, test**)
   * CD (**Deploy to Netlify**)
+
+O desenvolvimento foi guiado utilizando User centric metrics além de tópicos como acessibilidade, SEO e boas práticas, abaixo segue os reports do Lighthouse.
+
+![Lighthouse report](screenshots/lighthouse-report.png)
+
+![Lighthouse report mobile](screenshots/lighthouse-report-mobile.png)
+
 
 # Configuração inicial
 
@@ -73,10 +81,16 @@ yarn lint
 yarn build
 ```
 
-### Executar testes
+### Executar testes unitários
 
 ```bash
 yarn test:dev
+```
+
+### Executar testes E2E
+
+```bash
+yarn test:e2e
 ```
 
 ### Iniciar o JSON Server
